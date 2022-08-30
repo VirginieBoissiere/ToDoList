@@ -10,6 +10,9 @@ const listItems = document.querySelector('.list-items');
 console.log(listItems);
 listItems.innerHTML=localStorage.getItem('todo')
 
+let aujourdhui = new Date()
+let date=aujourdhui.toLocaleDateString("fr")
+console.log(date);
 
 // je selection et stock delete existants dans la page
 const btnDelete = document.querySelectorAll('.btn-delete'); 
@@ -29,7 +32,7 @@ const btnDelete = document.querySelectorAll('.btn-delete');
   })
   // je selectionne et stock le btn-archive existants dans la page
   const btnArchive =document.querySelectorAll('.btn-archive');
-  console.log(btnArchive);
+
    // je fait une boucle pour agir de la même façon pour chaque élement de la liste pour archive
    btnArchive.forEach (i=>{
     console.log(btnArchive);
@@ -57,11 +60,13 @@ form.addEventListener ('submit',function (e) {
     console.log('bouton cliqué');
     const todoValue = todo.value; 
     console.log(todoValue); 
-    
     // Je crée l'élément
     let item = `
     <div class="item">
-    <p>${todoValue}</p>
+    <div classe="todo">
+    <p>${todoValue} </p>
+    <p class ="date"> date de l'ajout de la tache ${date}</p>
+    </div>
     <button class="btn-delete">
     <i class="fas fa-trash-alt"></i>
     </button>

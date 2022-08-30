@@ -29,9 +29,10 @@ body{
 #todo-list{
     
     color: #1E2337;
-    width: 50%;
+    width: 80%;
     padding: 4rem;
 }
+
 /* formulaire */
 #form{
     display: flex;
@@ -64,32 +65,60 @@ body{
 button{
     background-color: #24C6DC;
     border: none;
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height:8rem;
 }
 .item{
     text-align: justify;
     margin: 1rem;
-    background-color: ;
+    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%);
     font-size: 5rem;
     color: rgb(10, 10, 10);
     display: flex;/*pour aligner <p> et <button>*/
     align-items: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+.todo{
+    text-align: justify;
+    margin: 1rem;
+    
+    font-size: 2rem;
+    color: rgb(10, 10, 10);
+    display: flex;/*pour aligner <p> et <button>*/
+    align-items: center;
+    flex-direction: column;
+
+}
+.date{
+    text-align: justify;
+    margin: 1rem;
+    
+    font-size: 3rem;
+    color: rgb(250, 250, 250);
+    display: flex;/*pour aligner <p> et <button>*/
+    align-items: flex-end;
+    flex-direction: column;
+
 }
 .item p{
     flex: 1;/*pour prendre le plus de place possible*/
     padding: 2rem;
 }
 .item button{
-    font-size: 2rem;
+    font-size: 6rem;
     margin: 1rem;
 }
 .item button.btn-archive{
-    font-size: 2rem;
+    font-size: 4rem;
     background-color: rgb(128, 205, 128);
 }
 .item button.btn-delete{
-    font-size: 2rem;
+    font-size: 4rem;
     background-color: rgb(188, 102, 102);
 }
 .done{
@@ -102,18 +131,6 @@ button{
 }
          
 
-.btn-grad {
-    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-  }
+
 
  

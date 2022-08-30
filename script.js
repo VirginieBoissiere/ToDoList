@@ -8,7 +8,7 @@ console.log(todo);
 //je selectionne et stock list-items
 const listItems = document.querySelector('.list-items');
 console.log(listItems);
-
+listItems.innerHTML=localStorage.getItem('')
 // je place un espion sur le submint 
 form.addEventListener ('submit',function (e) {
     // j'empêche la page de se rafraichir
@@ -31,6 +31,10 @@ form.addEventListener ('submit',function (e) {
     `
     // je place item dans listItems je  met += pour cumuler les élement html 
     listItems.innerHTML+=item;
+    // je stocke en local le template
+    localStorage.setItem("todo",listItems.innerHTML); 
+
+   
     // je selection et stock delete existants dans la page
     const btnDelete = document.querySelectorAll('.btn-delete'); 
    // je selectionne et stock le btn-archive existants dans la page
@@ -46,6 +50,7 @@ form.addEventListener ('submit',function (e) {
             console.log('bouton delete cliqué');
             // j'enleve l'élément parent 
             i.parentElement.remove();
+
         })
     })
     // je fait une boucle pour agir de la même façon pour chaque élement de la liste pour archive
@@ -58,6 +63,7 @@ form.addEventListener ('submit',function (e) {
             const parent =i.parentElement;
             // j'agis sur la div parent 
             parent.classList.toggle('done');
+   
           
         })
         

@@ -8,7 +8,9 @@ console.log(todo);
 //je selectionne et stock list-items
 const listItems = document.querySelector('.list-items');
 console.log(listItems);
-listItems.innerHTML=localStorage.getItem('')
+listItems.innerHTML=localStorage.getItem('todo')
+
+
 // je place un espion sur le submint 
 form.addEventListener ('submit',function (e) {
     // j'empêche la page de se rafraichir

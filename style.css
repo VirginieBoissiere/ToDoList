@@ -13,7 +13,7 @@ body{
     color: white;
 }
 .container{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -29,13 +29,16 @@ body{
 #todo-list{
     
     color: #1E2337;
-    width: 80%;
-    padding: 4rem;
+    width: 95%;
+    padding: 1rem;
 }
 
 /* formulaire */
 #form{
     display: flex;
+justify-content: center;
+    flex-wrap: wrap;
+
 }
 #todo-list input{
     width: 100%;
@@ -63,10 +66,11 @@ body{
     text-decoration: none;
   }
 button{
-    background-color: #24C6DC;
+    background-color: transparent;
     border: none;
     width: 8rem;
     height:8rem;
+    font-size: 4rem;
 }
 .item{
     text-align: justify;
